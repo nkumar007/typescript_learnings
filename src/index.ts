@@ -24,8 +24,6 @@ console.log(mySize);
 // functions in Typescript
 
 function calculateTax(income: number, taxYear = 2022): number {
-  let y;
-
   if (taxYear > 2022) return income * 1.2;
   return income * 1.3;
 }
@@ -40,4 +38,14 @@ let employee: {
   id: 1,
   name: "Naveen",
   retire: (date: Date) => console.log(date),
+};
+
+// Type alias
+
+// example
+
+type User = {
+  id: number;
+  name: string;
+  occupation?: string;
 };
