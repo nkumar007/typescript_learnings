@@ -20,3 +20,24 @@ enum Size {
 let mySize: Size = Size.Medium;
 
 console.log(mySize);
+
+// functions in Typescript
+
+function calculateTax(income: number, taxYear = 2022): number {
+  let y;
+
+  if (taxYear > 2022) return income * 1.2;
+  return income * 1.3;
+}
+
+// Objects, unlike in Javascript where objects can be changed throughout their life time. We need to design our objects explicitely in Typescript
+
+let employee: {
+  id: number;
+  name: string;
+  retire: (date: Date) => void;
+} = {
+  id: 1,
+  name: "Naveen",
+  retire: (date: Date) => console.log(date),
+};
